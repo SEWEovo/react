@@ -1,0 +1,35 @@
+注意：
+1.有且仅有一个父元素
+正确：var oDiv=<div>
+	<span>aaa</span>
+	<span>aaa</span>
+	</div>;
+错误：var oDiv=<span>aaa</span><span>aaa</span>;
+
+2.模板字符串
+ var oDiv=<div>{aaa}</div>
+
+3.最强：
+ 1.组件
+ 2.状态
+
+4.组件
+ 1.定义组件——组件==class
+ 	class 名字 extends React.Component{
+ 		render(){
+ 			return <span>123</span>
+ 		}
+ 	}
+ 2.使用组件
+ 	像标签一样使用
+ 	ReactDOM.render(
+ 		名字,(<span>123</span>)
+ 		渲染的标签
+ 	)
+
+5.属性——定死props
+  状态——可变state
+  在constructor里面初始化this.state={};
+  其他方法里面this.setState({});json
+
+
