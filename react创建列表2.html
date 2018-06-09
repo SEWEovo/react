@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.box{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+	}
+	</style>  
+</head>
+<body>
+	<div id="app"></div>
+	<script src="js/browser.js"></script>
+	<script src="js/react.development.js"></script>
+	<script src="js/react-dom.development.js"></script>
+	<script type="text/babel">
+		class Item extends React.Component{
+			constructor(...args){
+				super(...args);
+				}
+			render(){
+			 return <li>{this.props.value}</li>
+			}
+		}
+		class List extends React.Component{
+			constructor(...args){
+				super(...args);
+				this.state={
+				arr:[12,2,4,6]
+				};
+
+				
+			
+				}
+				fn(){
+				
+					this.setState({
+					arr:this.state.arr.concat([Math.random()])
+					});
+
+				}
+			render(){
+				
+				var result=[];
+				var arr=this.state.arr;
+				for(var i=0;i<arr.length;i++){
+				result.push(<Item key={i} value={arr[i]}/>);
+				}
+				return <ul>
+				<input type="button" onClick={this.fn.bind(this)} value="添加"></input>
+					{result}
+				</ul>
+			}
+		}	
+		ReactDOM.render(
+				<List/>,
+				document.getElementById("app")
+		)
+    </script>
+</body>
+</html>

@@ -31,5 +31,25 @@
   状态——可变state
   在constructor里面初始化this.state={};
   其他方法里面this.setState({});json
+  事件大小写不能乱
+  onChaneg
+  onClick
+6.绑定事件
+  onChange={fn}fn是方法，不是函数
+  onChange={this.fn}不对，需要bind
+  onChange={this.fn.bind(this)} Ok
+7.用了constructor必须super父类
+8.生命周期
+  componentWillMount()创建之前
+  componentDidMount()创建之后
+
+  componentWillUpdate()更新之前
+  componentDidUpdate()更新之后
+
+  componentWillUnmount()卸载之前
+
+  componentWillReceiveProps()组件参数更新
+   
+
 
 
