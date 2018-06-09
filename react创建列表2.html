@@ -25,18 +25,15 @@
 			 return <li>{this.props.value}</li>
 			}
 		}
+
 		class List extends React.Component{
 			constructor(...args){
 				super(...args);
 				this.state={
 				arr:[12,2,4,6]
-				};
-
-				
-			
-				}
-				fn(){
-				
+				};		
+			}
+				fn(){			
 					this.setState({
 					arr:this.state.arr.concat([Math.random()])
 					});
